@@ -58,7 +58,6 @@ The nEXO detector is part of an experiment projected to detect neutrino-less dou
 
 
 4. **Data Simulation**:
-   - Run the data simulation script to generate the data: `python simulate_data.py`
 
 ## Usage
 
