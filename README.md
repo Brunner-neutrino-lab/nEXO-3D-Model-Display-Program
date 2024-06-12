@@ -8,11 +8,12 @@ This project showcases a scaled-down, 3D-printed model of the nEXO detector, des
 
 1. [Introduction](#introduction)
 2. [Project Features](#project-features)
-3. [Hardware Components](#hardware-components)
-4. [Software Components](#software-components)
-5. [Setup and Installation](#setup-and-installation)
-6. [Usage](#usage)
-7. [Acknowledgments](#acknowledgments)
+3. [Responsabilities](#responsabilities)
+4. [Hardware Components](#hardware-components)
+5. [Software Components](#software-components)
+6. [Setup and Installation](#setup-and-installation)
+7. [Usage](#usage)
+8. [Acknowledgments](#acknowledgments)
 
 ## Introduction
 
@@ -30,6 +31,17 @@ The nEXO detector is part of an experiment projected to detect neutrino-less dou
   - Estimated rate of neutrino-less double beta decay.
 - **Interactive LED Display**: Powered by a Raspberry Pi, the LED display will showcase multiple half-lives of the decay to highlight its rarity.
 - **Condensed Time Frame**: Displaying ten years of data in a two-minute visualization.
+
+## Responsabilities
+
+3D model and printing
+- Grace,Felix, Eliot
+Hardware
+- Tania, Julien, Felix 
+Programming
+- Sophie, Emilio, Kavin
+
+Brian is advising the programming and hardware
 
 ## Hardware Components
 
