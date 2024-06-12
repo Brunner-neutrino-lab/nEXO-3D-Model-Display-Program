@@ -45,7 +45,7 @@ Brian is advising the programming and hardware
 
 ## Hardware Components
 
-- Raspberry Pi (User: pi  Pass: Element54$)
+- Raspberry Pi (User: pi,  Pass: Element54$)
 - 3D-printed model of the nEXO detector
 - LEDs (Blue for walls, RGB for TPC)
 - Power supply
