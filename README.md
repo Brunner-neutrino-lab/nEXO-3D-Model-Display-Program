@@ -49,7 +49,7 @@ The nEXO detector is part of an experiment projected to detect neutrino-less dou
 ## Setup and Installation
 
 1. **3D Printing**:
-   - Use the SolidWorks files provided in the `models` directory to print the scaled-down model of the nEXO detector.
+   - Use the SolidWorks files provided in the [sharepoint](https://mcgill.sharepoint.com/:f:/s/BrunnerNeutrinoLabModels_Group/EvGFXZofQUZPt6qD_oMlr6YBIfcuM76ZlL9AQwnTyHu-Tg?e=94aHd1) to print the scaled-down model of the nEXO detector.
    
 2. **Hardware Assembly**:
 
