@@ -34,11 +34,11 @@ The nEXO detector is part of an experiment projected to detect neutrino-less dou
 
 ## Responsabilities
 
-3D model and printing
+1. 3D model and printing
 - Grace,Felix, Eliot
-Hardware
+2. Hardware
 - Tania, Julien, Felix 
-Programming
+3. Programming
 - Sophie, Emilio, Kavin
 
 Brian is advising the programming and hardware
