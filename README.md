@@ -67,7 +67,12 @@ Brian is advising the programming and hardware
 
 
 3. **Software Installation**:
-
+  - Assignment of GPIO pins for LEDS:
+      - wallGPIO = 17 #physical/board pin 11
+      - floorGPIO = 27 #physical/board pin 13
+      - redGPIO = 9 #physical/board pin 21
+      - greenGPIO = 11 #physical/board pin 23
+      - blueGPIO = 25 #physical/board pin 22
 
 4. **Data Simulation**:
 
