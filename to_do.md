@@ -15,7 +15,7 @@
 | new cryostat | | June 28, 2024 | 🔄 In Progress | only need to change supporting structure not TPC or spheres|
 | cages for ladders | | | ⬜️ Incomplete | should try with soluable filament |
 | rpi case |  |  |🔄 In Progress | added a VGA connector hole, added room for HAT, need to add screw terminals to connect screw in distribution terminal onto roof |
-| cryopit bottom | | | ⬜️ Incomplete | make hole larger to fit screw in terminal and re add hole for platform body |
+| cryopit bottom | | |✅ Completed  | make hole larger to fit screw in terminal and re add hole for platform body and added a way to remove terminal and fixed more things |
 | add inverted triangle in bottom of TPC | | | ⬜️ Incomplete |  |
 
 ### Prints
