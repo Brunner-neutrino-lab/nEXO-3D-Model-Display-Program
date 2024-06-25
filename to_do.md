@@ -32,7 +32,7 @@
 | ladder cages | June 28, 2024 | ⬜️ Incomplete |  | try with soluable |
 | gantry crane and boxes | | ✅ Completed | 1h |  |
 | cave body | June 26, 2024 | ⬜️ Incomplete  |   |   |
-| cave dome | June 28, 2024 | ⬜️ Incomplete  |   |   |
+| cave dome | June 28, 2024 | 🔄 In Progress |   |   |
 | cryopit base | June 28, 2024 | ⬜️ Incomplete|  |  |
 | cryostat shells      | June 26, 2024 | ⬜️ Incomplete  |   |   |
 | cryostat supports   |  June 28, 2024 | ⬜️ Incomplete  |   |    |
