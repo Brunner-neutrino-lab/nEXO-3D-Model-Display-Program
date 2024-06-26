@@ -20,10 +20,13 @@ GPIO.setup(redGPIO, GPIO.OUT, initial=GPIO.LOW)
 GPIO.setup(greenGPIO, GPIO.OUT, initial=GPIO.LOW)
 GPIO.setup(blueGPIO, GPIO.OUT, initial=GPIO.LOW)
 
-GPIO.PWM(redGPIO,1000).start(0)
-GPIO.PWM(greenGPIO,1000).start(0)
-GPIO.PWM(blueGPIO,1000).start(0)
+RED = GPIO.PWM(redGPIO,100)
+GREEN = GPIO.PWM(greenGPIO,100)
+BLUE = GPIO.PWM(blueGPIO,100)
 
+RED.start(0)
+GREEN.start(0)
+BLUE.start(0)
 
 
 def flash(events): #run this every time an LED flashes. 
@@ -32,30 +35,30 @@ def flash(events): #run this every time an LED flashes.
 
     #turn LEDs on
     for event in events:
-        if event == "ROI_background": #R204; G121; B167. #CC79A7
-            GPIO.PWM(redGPIO,1000).ChangeDutyCycle(204/255 * 100)
-            GPIO.PWM(greenGPIO,1000).ChangeDutyCycle(121/255 * 100)
-            GPIO.PWM(blueGPIO,1000).ChangeDutyCycle(167/255 * 100)
+        if event == "ROI_background": 
+            RED.ChangeDutyCycle(0)
+            GREEN.ChangeDutyCycle(240/255 * 100)
+            BLUE.ChangeDutyCycle(40/255 * 100)
             print("ROI_background on")
-        if event == "0vbb": #R000; G158; B115. #009E73
-            GPIO.PWM(redGPIO,1000).ChangeDutyCycle(0)
-            GPIO.PWM(greenGPIO,1000).ChangeDutyCycle(158/255 * 100)
-            GPIO.PWM(blueGPIO,1000).ChangeDutyCycle(115/255 * 100)
+        if event == "0vbb":
+            RED.ChangeDutyCycle(255/255 * 100)
+            GREEN.ChangeDutyCycle(69/255 * 100)
+            BLUE.ChangeDutyCycle(0) 
             print("0vbb on")
-        if event == "2vbb": #R213; G094; B000. #D55E00
-            GPIO.PWM(redGPIO,1000).ChangeDutyCycle(213/255 * 100)
-            GPIO.PWM(greenGPIO,1000).ChangeDutyCycle(94/255 * 100)
-            GPIO.PWM(blueGPIO,1000).ChangeDutyCycle(0)  
+        if event == "2vbb": 
+            RED.ChangeDutyCycle(255/255 * 100)
+            GREEN.ChangeDutyCycle(20/255 * 100)
+            BLUE.ChangeDutyCycle(147/255 * 100)   
             print("2vbb on")
-        if event == "Xe137": #R230; G159; B000. #E69F00
-            GPIO.PWM(redGPIO,1000).ChangeDutyCycle(230/255 * 100)
-            GPIO.PWM(greenGPIO,1000).ChangeDutyCycle(159/255 * 100)
-            GPIO.PWM(blueGPIO,1000).ChangeDutyCycle(0)   
+        if event == "Xe137": 
+            RED.ChangeDutyCycle(200/255 * 100)
+            GREEN.ChangeDutyCycle(200/255 * 100)
+            BLUE.ChangeDutyCycle(200/255 * 100)  
             print("Xe137 on")
-        if event == "solar v": #R240; G228; B066. #F0E442
-            GPIO.PWM(redGPIO,1000).ChangeDutyCycle(240/255 * 100)
-            GPIO.PWM(greenGPIO,1000).ChangeDutyCycle(228/255 * 100)
-            GPIO.PWM(blueGPIO,1000).ChangeDutyCycle(66/255 * 100)  
+        if event == "solar v": 
+            RED.ChangeDutyCycle(245/255 * 100)
+            GREEN.ChangeDutyCycle(235/255 * 100)
+            BLUE.ChangeDutyCycle(10/255 * 100)   
             print("solar v on")
         if event == "TPC_muon": # turn on bottom of outer detector
             GPIO.output(floorGPIO, GPIO.HIGH)
@@ -68,9 +71,9 @@ def flash(events): #run this every time an LED flashes.
     time.sleep(flashtime)
 
     #turn LEDs off
-    GPIO.PWM(redGPIO,1000).ChangeDutyCycle(0)
-    GPIO.PWM(greenGPIO,1000).ChangeDutyCycle(0)
-    GPIO.PWM(blueGPIO,1000).ChangeDutyCycle(0)
+    RED.ChangeDutyCycle(0)
+    GREEN.ChangeDutyCycle(0)
+    BLUE.ChangeDutyCycle(0)
     GPIO.output(floorGPIO, GPIO.LOW)
     GPIO.output(wallGPIO, GPIO.LOW)
 
@@ -218,9 +221,15 @@ def main_loop(runtime, mean_times):
                 break
 
         except KeyboardInterrupt:
-            GPIO.cleanup()
             break
+GPIO.cleanup()
 
+#mean_times = [5,5,5,5,5,5,5]
+#main_loop(30, mean_times)
 
 mean_times = event_rates()
-main_loop(120, mean_times)
+main_loop(60, mean_times)
+
+GPIO.cleanup()
+
+
