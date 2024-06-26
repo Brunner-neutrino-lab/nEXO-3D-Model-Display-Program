@@ -222,7 +222,6 @@ def main_loop(runtime, mean_times):
 
         except KeyboardInterrupt:
             break
-GPIO.cleanup()
 
 #mean_times = [5,5,5,5,5,5,5]
 #main_loop(30, mean_times)
