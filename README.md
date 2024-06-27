@@ -64,15 +64,19 @@ Brian is advising the programming and hardware
    - Use the SolidWorks files provided in the [sharepoint](https://mcgill.sharepoint.com/:f:/s/BrunnerNeutrinoLabModels_Group/EvGFXZofQUZPt6qD_oMlr6YBIfcuM76ZlL9AQwnTyHu-Tg?e=94aHd1) to print the scaled-down model of the nEXO detector.
    
 2. **Hardware Assembly**:
+   - Schematics for the Raspberry Pi HAT and inside the model are found in the 'Schematics' folder.
 
 
-3. **Software Installation**:
+4. **Software Installation**:
   - Assignment of GPIO pins for LEDS:
       - wallGPIO = 17 #physical/board pin 11
       - floorGPIO = 27 #physical/board pin 13
       - redGPIO = 9 #physical/board pin 21
       - greenGPIO = 11 #physical/board pin 23
       - blueGPIO = 25 #physical/board pin 22
+  - The program to display the LEDs is found in the file 'LED_program.py'
+  - 'Test.py' was only used to store the RGB values for the TPC colours.
+      - in the 'Schematic' folder the LED colour assignment to events is found.
 
 4. **Data Simulation**:
 
@@ -82,7 +86,8 @@ Brian is advising the programming and hardware
    - Run the main control script: (not finished yet)
 
 2. **Interacting with the Model**:
-   - The LEDs will display different data sets including muons, ROI background data, and Xenon 137 data.
+   - The LEDs will display different data sets including muons, 2vbb, 0vbb, ROI background data, and Xenon 137 data.
+   - There will be an option to view the data from the inner 1 tonne as well as the inner 2 tonne of the detector.
    - Observe the visualization of the estimated rate of neutrino-less double beta decay and its half-lives.
 
 ## Acknowledgments
