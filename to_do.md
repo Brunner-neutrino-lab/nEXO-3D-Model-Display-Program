@@ -14,11 +14,11 @@
 | added channels in floor and access from bottom of base and added ladders to platform| Grace|   | ✅ Completed |  |
 | new cryostat | | June 28, 2024 | 🔄 In Progress | only need to change supporting structure not TPC or spheres|
 | cages for ladders |   | | ⬜️ Incomplete | should try with soluable filament |
-| rpi case |  |  |🔄 In Progress | added a VGA connector hole, added room for HAT, need to add screw terminals to connect screw in distribution terminal onto roof |
+| rpi case | Felix  |  |✅ Completed | added a VGA connector hole, added room for HAT, need to add screw terminals to connect screw in distribution terminal onto roof |
 | cryopit bottom | | |✅ Completed  | make hole larger to fit screw in terminal and re add hole for platform body and added a way to remove terminal and fixed more things |
 | add inverted triangle in bottom of TPC | | | ⬜️ Incomplete |  |
 
-### Prints
+### Prints (for first model)
 
 | Task             | Deadline   | Status          | Print Time| Notes|
 |------------------|------------|-----------------|-----------|------|
@@ -28,15 +28,15 @@
 | TPC cover      |  | ⬜️ Incomplete  || |
 | platform and walkway         | | ✅ Completed | 6h| glued on walkway|
 | platform roof | | ✅ Completed | 2h |  |
-| ladders | June 28, 2024 | ⬜️ Incomplete |   | slow down the print speed and decrease layer thickness |
+| ladders | June 28, 2024 | ✅ Completed  |  30min | slow down the print speed and decrease layer thickness |
 | ladder cages | June 28, 2024 | ⬜️ Incomplete |  | try with soluable |
 | gantry crane and boxes | | ✅ Completed | 1h |  |
-| cave body | June 26, 2024 | ⬜️ Incomplete  |   |   |
+| cave body | June 26, 2024 |✅ Completed  |  24h |   |
 | cave dome | June 28, 2024 | 🔄 In Progress |   |   |
-| cryopit base | June 28, 2024 | ⬜️ Incomplete|  |  |
+| cryopit base | June 28, 2024 | 🔄 In Progress|  |  |
 | cryostat shells      | June 26, 2024 | ⬜️ Incomplete  |   |   |
 | cryostat supports   |  June 28, 2024 | ⬜️ Incomplete  |   |    |
-| rpi case         | June 28, 2024  | ⬜️ Incomplete  |   |   |
+| rpi case         | June 28, 2024  |🔄 In Progress |   |   |
 
 ### Hardware and Software
 
@@ -47,9 +47,11 @@
 | make schematic for HAT             |Julien, Grace |  | ✅ Completed   | |
 | test LEDs with pi         | Sophie, Julien   | | ✅ Completed   | |
 | design HAT          |  Julien | June 28, 2024 | ✅ Completed | |
-| solder HAT          |     | June 28, 2024 | 🔄 In Progress | |
+| solder first HAT          |     | June 28, 2024 | ✅ Completed  | |
+| test HAT |   |    |  ✅ Completed | works! however, VGA cable has connected pins so looking for new cable|
 | write test code for LEDs    | Sophie    |  |  ✅ Completed   | |
-| write GUI for touchscreen   | Emilio + Sophie   | June 28, 2024 |  ⬜️ Incomplete   | try to include option to play video |
+|sand down tank interier and glue reflective foil | Grace | July 4, 2024 |  🔄 In Progress |  |
+| write GUI for touchscreen   | Emilio + Eliot   | June 28, 2024 |  ⬜️ Incomplete   | try to include option to play video |
 | glue screw in terminal onto cryopit base panel |  |  |⬜️ Incomplete|  |
 | glue wires and LEDs into place |  |  | ⬜️ Incomplete|  |
 | test GUI |    |  | ⬜️ Incomplete|  |
