@@ -12,7 +12,7 @@
 | cave and cryopit base | Felix |   | ✅ Completed | |
 | added connections between different pieces and channels through walls and in base for wiring | Felix |   | ✅ Completed |  |
 | added channels in floor and access from bottom of base and added ladders to platform| Grace|   | ✅ Completed |  |
-| new cryostat | | June 28, 2024 | 🔄 In Progress | only need to change supporting structure not TPC or spheres|
+| new cryostat | | June 28, 2024 | |✅ Completed | only need to change supporting structure not TPC or spheres|
 | cages for ladders |   | | ⬜️ Incomplete | should try with soluable filament |
 | rpi case | Felix  |  |✅ Completed | added a VGA connector hole, added room for HAT, need to add screw terminals to connect screw in distribution terminal onto roof |
 | cryopit bottom | | |✅ Completed  | make hole larger to fit screw in terminal and re add hole for platform body and added a way to remove terminal and fixed more things |
@@ -34,7 +34,7 @@
 | cave body | June 26, 2024 |✅ Completed  |  24h |   |
 | cave dome | June 28, 2024 | 🔄 In Progress |   |   |
 | cryopit base | June 28, 2024 | 🔄 In Progress|  |  |
-| cryostat shells      | June 26, 2024 | ⬜️ Incomplete  |   |   |
+| cryostat shells      | June 26, 2024 | 🔄 In Progress |   |   |
 | cryostat supports   |  June 28, 2024 | ⬜️ Incomplete  |   |    |
 | rpi case         | June 28, 2024  |🔄 In Progress |   |   |
 
@@ -51,8 +51,8 @@
 | test HAT |   |    |  ✅ Completed | works! however, VGA cable has connected pins so looking for new cable|
 | write test code for LEDs    | Sophie    |  |  ✅ Completed   | |
 |sand down tank interier and glue reflective foil | Grace | July 4, 2024 |  🔄 In Progress |  |
-| write GUI for touchscreen   | Emilio + Eliot   | June 28, 2024 |  ⬜️ Incomplete   | try to include option to play video |
-| glue screw in terminal onto cryopit base panel |  |  |⬜️ Incomplete|  |
-| glue wires and LEDs into place |  |  | ⬜️ Incomplete|  |
+| write GUI for touchscreen   | Emilio + Eliot   | June 28, 2024 |    🔄 In Progress    | try to include option to play video |
+| glue screw in terminal onto cryopit base panel |  |  |⬜️ Incomplete |  |
+| glue wires and LEDs into place |  |  |  🔄 In Progress  |  |
 | test GUI |    |  | ⬜️ Incomplete|  |
 | test entire code |  |  | ⬜️ Incomplete |  |
