@@ -37,7 +37,7 @@
 | cryopit base | June 28, 2024 | ✅ Completed|  15h| the bottom didn't print correctly may have to reprint |
 | cryostat shells      | June 26, 2024 | ✅ Completed| 1h  |   |
 | cryostat supports   |  June 28, 2024 | ⬜️ Incomplete  |   |   for some reason not printing well even though have printed before |
-| rpi case         | June 28, 2024  |🔄 In Progress |   |   |
+| rpi case         | June 28, 2024  |✅ Completed|   |   |
 
 ### Hardware and Software
 
