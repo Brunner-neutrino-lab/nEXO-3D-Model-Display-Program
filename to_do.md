@@ -16,7 +16,6 @@
 | cages for ladders |   | | ⬜️ Incomplete | should try with soluable filament |
 | rpi case | Felix  |  |✅ Completed | added a VGA connector hole, added room for HAT, need to add screw terminals to connect screw in distribution terminal onto roof |
 | cryopit bottom | | |✅ Completed  | make hole larger to fit screw in terminal and re add hole for platform body and added a way to remove terminal and fixed more things |
-| add inverted triangle in bottom of TPC | | | ⬜️ Incomplete |  |
 
 ### Prints (for first model)
 
@@ -26,17 +25,17 @@
 | tank roof and floor |  | ✅ Completed | 3h |  |
 | cryostat frame   |            |✅ Completed   | 1h | got to print with no stringing (slower speed + dried filament |
 | TPC cover      |  |✅ Completed  | 15 min | |
-| TPC | |  ⬜️ Incomplete | | |
+| TPC | |  ✅ Completed | | |
 | platform and walkway         | | ✅ Completed | 6h| glued on walkway|
 | platform roof | | ✅ Completed | 2h |  |
 | ladders | June 28, 2024 | ✅ Completed  |  30min | slow down the print speed and decrease layer thickness |
 | ladder cages | June 28, 2024 | ⬜️ Incomplete |  | try with soluable |
 | gantry crane and boxes | | ✅ Completed | 1h |  |
 | cave body | June 26, 2024 |✅ Completed  |  24h |   |
-| cave dome | June 28, 2024 | 🔄 In Progress |   |   |
+| cave dome | June 28, 2024 | ✅ Completed | 14h  |   |
 | cryopit base | June 28, 2024 | ✅ Completed|  15h| the bottom didn't print correctly may have to reprint |
 | cryostat shells      | June 26, 2024 | ✅ Completed| 1h  |   |
-| cryostat supports   |  June 28, 2024 | ⬜️ Incomplete  |   |   for some reason not printing well even though have printed before |
+| cryostat supports   |  June 28, 2024 | 🔄 In Progress   |   |   for some reason not printing well even though have printed before |
 | rpi case         | June 28, 2024  |✅ Completed|   |   |
 
 ### Hardware and Software
