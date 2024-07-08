@@ -212,7 +212,7 @@ def start_simulation():
 
 root = tk.Tk()
 root.title("Command Window")
-root.geometry("750x450")
+root.geometry("800x480")
 root.configure(bg='#2874A6')
 
 main_frame = tk.Frame(root)
@@ -233,10 +233,10 @@ table_frame = tk.Frame(main_frame)
 table_frame.grid(row=0, column=0, padx=20, pady=20, sticky="nsew")
 
 # Building the color coding
-tk.Label(table_frame, text="Color Coding", font=('Arial', 20, 'bold')).grid(row=0, columnspan=2, pady=10)
+tk.Label(table_frame, text="Color Coding", font=('Arial', 18, 'bold')).grid(row=0, columnspan=2, pady=10)
 for i, (case, color) in enumerate(cases, start=1):
-    tk.Label(table_frame, text=case, font=('Arial', 16)).grid(row=i, column=0, padx=5, pady=5, sticky='w')
-    color_label = tk.Label(table_frame, text=color, font=('Arial', 16), bg=color, fg='black', width=10)
+    tk.Label(table_frame, text=case, font=('Arial', 14)).grid(row=i, column=0, padx=5, pady=5, sticky='w')
+    color_label = tk.Label(table_frame, text=color, font=('Arial', 14), bg=color, fg='black', width=10)
     color_label.grid(row=i, column=1, padx=10, pady=10, sticky='w')
 
 # Frame for Selection Choices 
@@ -247,28 +247,28 @@ choices_frame.grid(row=0, column=1, padx=20, pady=20, sticky="nsew")
 checkbox_frame = tk.Frame(choices_frame)
 checkbox_frame.pack(padx=10, pady=10)
 
-tk.Label(checkbox_frame, text="Choose Half Life:", font=('Arial', 20, 'bold')).pack(pady=5)
+tk.Label(checkbox_frame, text="Choose Half Life:", font=('Arial', 18, 'bold')).pack(pady=5)
 
 selection_half_life = tk.IntVar()
 
-checkbox1 = tk.Radiobutton(checkbox_frame, text="3 sigma discovery", variable=selection_half_life, value=1, font=('Arial', 16))
+checkbox1 = tk.Radiobutton(checkbox_frame, text="3 sigma discovery", variable=selection_half_life, value=1, font=('Arial', 14))
 checkbox1.pack(anchor='w')
-checkbox2 = tk.Radiobutton(checkbox_frame, text="Shorter half-life", variable=selection_half_life, value=2, font=('Arial', 16))
+checkbox2 = tk.Radiobutton(checkbox_frame, text="Shorter half-life", variable=selection_half_life, value=2, font=('Arial', 14))
 checkbox2.pack(anchor='w')
-checkbox3 = tk.Radiobutton(checkbox_frame, text="Sensitivity 90% CL", variable=selection_half_life, value=3, font=('Arial', 16))
+checkbox3 = tk.Radiobutton(checkbox_frame, text="Sensitivity 90% CL", variable=selection_half_life, value=3, font=('Arial', 14))
 checkbox3.pack(anchor='w')
 
 # Frame for Volume Selection
 volume_frame = tk.Frame(choices_frame)
 volume_frame.pack(padx=10, pady=40)
 
-tk.Label(volume_frame, text="Choose Volume:", font=('Arial', 20, 'bold')).pack(pady=5)
+tk.Label(volume_frame, text="Choose Volume:", font=('Arial', 18, 'bold')).pack(pady=5)
 
 selection_volume = tk.IntVar()
 
-radio1 = tk.Radiobutton(volume_frame, text="1 ton", variable=selection_volume, value=1, font=('Arial', 16))
+radio1 = tk.Radiobutton(volume_frame, text="1 ton", variable=selection_volume, value=1, font=('Arial', 14))
 radio1.pack(anchor='w')
-radio2 = tk.Radiobutton(volume_frame, text="2 tons", variable=selection_volume, value=2, font=('Arial', 16))
+radio2 = tk.Radiobutton(volume_frame, text="2 tons", variable=selection_volume, value=2, font=('Arial', 14))
 radio2.pack(anchor='w')
 
 
@@ -281,22 +281,22 @@ choices_frame2.grid(row=0, column=2, padx=20, pady=20, sticky="nsew")
 timer_frame = tk.Frame(choices_frame2)
 timer_frame.pack(padx=10, pady=10)
 
-tk.Label(timer_frame, text="Choose Timer Duration:", font=('Arial', 20, 'bold')).pack(pady=5)
+tk.Label(timer_frame, text="Choose Timer Duration:", font=('Arial', 18, 'bold')).pack(pady=5)
 
 timer_duration = tk.IntVar()
 
-radio5 = tk.Radiobutton(timer_frame, text="5 years", variable=timer_duration, value=5, font=('Arial', 16))
+radio5 = tk.Radiobutton(timer_frame, text="5 years", variable=timer_duration, value=5, font=('Arial', 14))
 radio5.pack(anchor='w')
-radio10 = tk.Radiobutton(timer_frame, text="10 years", variable=timer_duration, value=10, font=('Arial', 16))
+radio10 = tk.Radiobutton(timer_frame, text="10 years", variable=timer_duration, value=10, font=('Arial', 14))
 radio10.pack(anchor='w')
 
 
 # Button to Start Simulation
-start_button = tk.Button(choices_frame2, text="Start Simulation", command=start_simulation, width=16, height=2, padx = 10, pady = 10, font = ('Arial', 16, 'bold'))
+start_button = tk.Button(choices_frame2, text="Start Simulation", command=start_simulation, width=16, height=2, padx = 10, pady = 10, font = ('Arial', 14, 'bold'))
 start_button.pack(padx=10, pady=30)
 
 # Label to Display Timer
-timer_label = tk.Label(choices_frame2, text="Time remaining: 0.00 years", font=('Arial', 18, 'bold'))
+timer_label = tk.Label(choices_frame2, text="Time remaining: 0.00 years", font=('Arial', 16, 'bold'))
 timer_label.pack(pady=10)
 
 # Configuring expansion options for main_frame
