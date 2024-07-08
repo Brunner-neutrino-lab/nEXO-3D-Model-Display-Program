@@ -26,7 +26,7 @@ BLUE = GPIO.PWM(blueGPIO, 100)
 RED.start(0)
 GREEN.start(0)
 BLUE.start(0)
-"""
+
 
 def flash(events):
     flashtime = 0.5  # s that LEDs should flash
@@ -211,7 +211,7 @@ def start_simulation():
 
 root = tk.Tk()
 root.title("Command Window")
-root.geometry("800x480")
+root.geometry("750x450")
 root.configure(bg='#2874A6')
 
 main_frame = tk.Frame(root)
