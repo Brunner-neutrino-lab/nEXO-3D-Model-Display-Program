@@ -4,8 +4,7 @@ import numpy as np
 from numpy.random import exponential
 import threading
 
-# Uncomment the GPIO setup if running on a Raspberry Pi with the required hardware.
-"""
+
 import RPi.GPIO as GPIO
 
 wallGPIO = 17  # physical/board pin 11
