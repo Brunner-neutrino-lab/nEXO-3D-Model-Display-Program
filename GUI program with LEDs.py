@@ -35,46 +35,46 @@ def flash(events):
     # Turn LEDs on
     for event in events:
         if event == "ROI_background":
-            # RED.ChangeDutyCycle(0)
-            # GREEN.ChangeDutyCycle(240 / 255 * 100)
-            # BLUE.ChangeDutyCycle(40 / 255 * 100)
+            RED.ChangeDutyCycle(0)
+            GREEN.ChangeDutyCycle(240 / 255 * 100)
+            BLUE.ChangeDutyCycle(40 / 255 * 100)
             print("ROI_background on")
         if event == "0vbb":
-            # RED.ChangeDutyCycle(255 / 255 * 100)
-            # GREEN.ChangeDutyCycle(69 / 255 * 100)
-            # BLUE.ChangeDutyCycle(0)
+            RED.ChangeDutyCycle(255 / 255 * 100)
+            GREEN.ChangeDutyCycle(69 / 255 * 100)
+            BLUE.ChangeDutyCycle(0)
             print("0vbb on")
         if event == "2vbb":
-            # RED.ChangeDutyCycle(255 / 255 * 100)
-            # GREEN.ChangeDutyCycle(20 / 255 * 100)
-            # BLUE.ChangeDutyCycle(147 / 255 * 100)
+            RED.ChangeDutyCycle(255 / 255 * 100)
+            GREEN.ChangeDutyCycle(20 / 255 * 100)
+            BLUE.ChangeDutyCycle(147 / 255 * 100)
             print("2vbb on")
         if event == "Xe137":
-            # RED.ChangeDutyCycle(200 / 255 * 100)
-            # GREEN.ChangeDutyCycle(200 / 255 * 100)
-            # BLUE.ChangeDutyCycle(200 / 255 * 100)
+            RED.ChangeDutyCycle(200 / 255 * 100)
+            GREEN.ChangeDutyCycle(200 / 255 * 100)
+            BLUE.ChangeDutyCycle(200 / 255 * 100)
             print("Xe137 on")
         if event == "solar v":
-            # RED.ChangeDutyCycle(245 / 255 * 100)
-            # GREEN.ChangeDutyCycle(235 / 255 * 100)
-            # BLUE.ChangeDutyCycle(10 / 255 * 100)
+            RED.ChangeDutyCycle(245 / 255 * 100)
+            GREEN.ChangeDutyCycle(235 / 255 * 100)
+            BLUE.ChangeDutyCycle(10 / 255 * 100)
             print("solar v on")
         if event == "TPC_muon":  # turn on bottom of outer detector
-            # GPIO.output(floorGPIO, GPIO.HIGH)
+            GPIO.output(floorGPIO, GPIO.HIGH)
             print("TPC_muon on")
         if event == "cryostat_muon":  # turn on whole outer detector
-            # GPIO.output(floorGPIO, GPIO.HIGH)
-            # GPIO.output(wallGPIO, GPIO.HIGH)
+            GPIO.output(floorGPIO, GPIO.HIGH)
+            GPIO.output(wallGPIO, GPIO.HIGH)
             print("cryostat muon on")
 
     time.sleep(flashtime)
 
     # Turn LEDs off
-    # RED.ChangeDutyCycle(0)
-    # GREEN.ChangeDutyCycle(0)
-    # BLUE.ChangeDutyCycle(0)
-    # GPIO.output(floorGPIO, GPIO.LOW)
-    # GPIO.output(wallGPIO, GPIO.LOW)
+    RED.ChangeDutyCycle(0)
+    GREEN.ChangeDutyCycle(0)
+    BLUE.ChangeDutyCycle(0)
+    GPIO.output(floorGPIO, GPIO.LOW)
+    GPIO.output(wallGPIO, GPIO.LOW)
 
 def main_loop():
     rates_per_year = np.zeros(7)  # array to store events/year for each type
