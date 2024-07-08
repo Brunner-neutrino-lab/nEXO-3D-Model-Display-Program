@@ -20,7 +20,7 @@ GPIO.setup(greenGPIO, GPIO.OUT, initial=GPIO.LOW)
 GPIO.setup(blueGPIO, GPIO.OUT, initial=GPIO.LOW)
 
 RED = GPIO.PWM(redGPIO, 100)
-GREEN = GPIO.PWM(greengpio, 100)
+GREEN = GPIO.PWM(greenGPIO, 100)
 BLUE = GPIO.PWM(blueGPIO, 100)
 
 RED.start(0)
