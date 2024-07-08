@@ -19,6 +19,7 @@ GPIO.setup(wallGPIO, GPIO.OUT, initial=GPIO.LOW)
 GPIO.setup(redGPIO, GPIO.OUT, initial=GPIO.LOW)
 GPIO.setup(greenGPIO, GPIO.OUT, initial=GPIO.LOW)
 GPIO.setup(blueGPIO, GPIO.OUT, initial=GPIO.LOW)
+GPIO.setup(floorGPIO, GPIO.OUT, initial=GPIO.LOW)
 
 RED = GPIO.PWM(redGPIO, 100)
 GREEN = GPIO.PWM(greenGPIO, 100)
