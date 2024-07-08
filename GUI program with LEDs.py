@@ -14,6 +14,7 @@ greenGPIO = 11  # physical/board pin 23
 blueGPIO = 25  # physical/board pin 22
 
 GPIO.setmode(GPIO.BCM)
+GPIO.setwarnings(False)
 GPIO.setup(wallGPIO, GPIO.OUT, initial=GPIO.LOW)
 GPIO.setup(redGPIO, GPIO.OUT, initial=GPIO.LOW)
 GPIO.setup(greenGPIO, GPIO.OUT, initial=GPIO.LOW)
