@@ -89,6 +89,12 @@ Brian is advising the programming and hardware
    - The LEDs will display different data sets including muons, 2vbb, 0vbb, ROI background data, and Xenon 137 data.
    - There will be an option to view the data from the inner 1 tonne as well as the inner 2 tonne of the detector.
    - Observe the visualization of the estimated rate of neutrino-less double beta decay and its half-lives.
+3. **Connecting over SSH**
+   - pi must be connected to the same network as device (ethernet/internet)
+   - type into terminal 'ssh pi@[pi IP address]'
+   - if displaying on touchscreeen you have to define the display enviroment (the screen is just DISPLAY=:0) before the command
+     - ex. DISPLAY=:0 gui.py
+     - ex. sudo DISPLAY=:0 LEDs.py
 
 ## Acknowledgments
 
