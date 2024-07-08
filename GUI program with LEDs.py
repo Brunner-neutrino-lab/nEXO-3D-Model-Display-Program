@@ -2,7 +2,7 @@ import tkinter as tk
 import time
 import numpy as np
 from numpy.random import exponential
-from tkvideo import tkvideo
+from tkinter import tkvideo
 import threading
 
 # Uncomment the GPIO setup if running on a Raspberry Pi with the required hardware.
