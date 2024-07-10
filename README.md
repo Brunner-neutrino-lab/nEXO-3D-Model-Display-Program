@@ -12,8 +12,9 @@ This project showcases a scaled-down, 3D-printed model of the nEXO detector, des
 4. [Hardware Components](#hardware-components)
 5. [Software Components](#software-components)
 6. [Setup and Installation](#setup-and-installation)
-7. [Usage](#usage)
-8. [Acknowledgments](#acknowledgments)
+7. [Data Simulation](#data-simulation)
+8. [Usage](#usage)
+9. [Acknowledgments](#acknowledgments)
 
 ## Introduction
 
@@ -78,7 +79,8 @@ Brian is advising the programming and hardware
   - 'Test.py' was only used to store the RGB values for the TPC colours.
       - in the 'Schematic' folder the LED colour assignment to events is found.
 
-4. **Data Simulation**:
+
+## Data Simulation
 General approach: calculate the mean/expected time between events (for our time scale of 2 min = 10 years), then randomly sample the time between LED flashes using an exponential distribution (distribution for time between Poisson events). We have the option
  to vary the half-life of 0vbb as well as the LXe volume (inner 2t or inner 1t). 
 
