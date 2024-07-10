@@ -79,6 +79,35 @@ Brian is advising the programming and hardware
       - in the 'Schematic' folder the LED colour assignment to events is found.
 
 4. **Data Simulation**:
+General approach: calculate the mean/expected time between events (for our time scale of 2 min = 10 years), then randomly sample the time between LED flashes using an exponential distribution (distribution for time between Poisson events). We have the option
+ to vary the half-life of 0vbb as well as the LXe volume (inner 2t or inner 1t). 
+
+The TPC will be flashed different colours for 5 different events in the ROI (the ROI is SS events, with energy within 0vbb FHWM): 
+  - 0vbb
+  - 2vbb
+  - solar v
+  - Xe-137 activations
+  - and the remaining background events. 
+
+0vbb: Mean number of decays per year is calculated based on the mean lifetime (half-life divided by log(2)), assuming 76.1% of events are in the ROI (as FHWM is approximately 76.1% of area under Gaussian distribution). 
+
+  - 3 sigma discovery potential half-life: 7.4 x 10^27 years (https://iopscience.iop.org/article/10.1088/1361-6471/ac3631/pdf)   
+  - Half-life sensitivity: 1.35 × 10^28 years
+  - Our third option is currently 1 x 10^27 years.
+
+Total background rate (https://arxiv.org/abs/1805.11142v2, table 3.1):  
+  - Inner 2 tons: 3.6 × 10^−4 events/(FWHM·kg·yr)  
+  - Inner 1 ton: 1.4 × 10^−4 events/(FWHM·kg·yr)  
+
+Events in the background are separated into 2vbb, solar v, Xe-137 and remaining background according to the composition within FWHM for the inner 2t (https://iopscience.iop.org/article/10.1088/1361-6471/ac3631/pdf, estimated from Fig. 8):  
+  - 2vbb: 0.8%  
+  - Solar v: 2.1%  
+  - Xe-137: 2.4%   
+  - Rest of background: 94.7%  
+
+The outer detector (walls and floor) will be flashed for muons (these rates may have to be scaled differently as they are very high with our time scale; currently the lights just stay on):  
+  - Muons through TPC: about 0.6 per day 
+  - Muons through outer cryostat: about 5 per day 
 
 ## Usage
 
