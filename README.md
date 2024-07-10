@@ -31,27 +31,31 @@ The nEXO detector is part of an experiment projected to detect neutrino-less dou
   - Xenon 137 data.
   - Estimated rate of neutrino-less double beta decay.
 - **Interactive LED Display**: Powered by a Raspberry Pi, the LED display will showcase multiple half-lives of the decay to highlight its rarity.
-- **Condensed Time Frame**: Displaying ten years of data in a two-minute visualization.
+- **Condensed Time Frame**: Displaying ten years or five years of data in a two-minute or one-minute visualization respectively.
 
 ## Responsabilities
 
 1. 3D model and printing
-- Grace,Felix, Eliot
+- Grace, Felix
 2. Hardware
-- Tania, Julien, Felix 
+- Julien, Felix 
 3. Programming
-- Sophie, Emilio, Kavin
+- Sophie, Emilio, Eliot
 
 Brian is advising the programming and hardware
 
 ## Hardware Components
 
 - Raspberry Pi (User: pi,  Pass: Element54$)
-- 3D-printed model of the nEXO detector
-- LEDs (Blue for walls, RGB for TPC)
+- 3D-printed model of the nEXO detector (32 components)
+- LEDs (5 blue for walls and 4 blue for floor, RGB for TPC)
 - Power supply
 - Current-limiting resistors
-- Transistors
+- IC (transistors)
+- HAT for raspberry pi
+- Wires (mainly used 26AWG)
+- Glue
+- Mirror sheet
 
 ## Software Components
 
@@ -114,7 +118,8 @@ The outer detector (walls and floor) will be flashed for muons (these rates may 
 ## Usage
 
 1. **Start the Visualization**:
-   - Run the main control script: (not finished yet)
+   - Run the main control script: GUI_program_with_LEDs.py
+   - GUI will allow the user to choose options before running simulation
 
 2. **Interacting with the Model**:
    - The LEDs will display different data sets including muons, 2vbb, 0vbb, ROI background data, and Xenon 137 data.
