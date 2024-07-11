@@ -29,9 +29,10 @@ RED.start(0)
 GREEN.start(0)
 BLUE.start(0)
 
-# Event to signal simulation stop
-stop_simulation_event = threading.Event()
+# Global variables for threading and simulation control
 simulation_thread = None
+stop_simulation_event = threading.Event()
+is_simulation_running = False
 
 def flash(events):
     flashtime = 0.5  # s that LEDs should flash
@@ -203,9 +204,8 @@ def update_timer_label(start_years=10):
     update()
 
 
-
 def start_simulation():
-    global simulation_thread, stop_simulation_event
+    global simulation_thread, stop_simulation_event, is_simulation_running
     
     # Get selected timer duration (5 or 10 years)
     start_years = timer_duration.get()
@@ -213,31 +213,22 @@ def start_simulation():
     # Update timer label with selected duration
     update_timer_label(start_years)
 
-    # Check if a simulation thread is already running
-    if simulation_thread and simulation_thread.is_alive():
+    # Check if a simulation is already running
+    if is_simulation_running:
         # Set the stop event to signal the thread to stop
         stop_simulation_event.set()
         
-        # Schedule a check to join the thread after a short delay
-        root.after(100, check_thread_finished)
-    else:
-        # Clear the stop event for a new simulation
-        stop_simulation_event.clear()
-        
-        # Start a new simulation thread
-        simulation_thread = threading.Thread(target=main_loop)
-        simulation_thread.start()
-
-def check_thread_finished():
-    global simulation_thread
+        # Wait for the simulation thread to finish
+        if simulation_thread:
+            simulation_thread.join()
     
-    # Check if the simulation thread is still alive
-    if simulation_thread and simulation_thread.is_alive():
-        # If alive, schedule another check after a short delay
-        root.after(100, check_thread_finished)
-    else:
-        # If not alive, start a new simulation
-        start_simulation()
+    # Clear the stop event for a new simulation
+    stop_simulation_event.clear()
+    
+    # Start a new simulation thread
+    simulation_thread = threading.Thread(target=main_loop)
+    simulation_thread.start()
+
 
 
 
