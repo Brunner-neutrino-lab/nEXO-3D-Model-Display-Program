@@ -275,13 +275,20 @@ checkbox_frame.pack(padx=10, pady=10)
 
 tk.Label(checkbox_frame, text="Choose Half Life:", font=('Arial', 16, 'bold')).pack(pady=2)
 
+# Define text for checkboxes with superscripts
+text1 = "7.4\u00D710\u2077 (3\u03C3)"  # 7.4*10^7 (3σ)
+text2 = "1.0\u00D710\u2077 (Shorter)"  # 1.0*10^7 (Shorter)
+text3 = "1.35\u00D710\u2078 (90% CL)"  # 1.35*10^8 (90% CL)
+
+# Variables for radio buttons
 selection_half_life = tk.IntVar()
 
-checkbox1 = tk.Radiobutton(checkbox_frame, text= 7.4$*10^27$"(3σ)", variable=selection_half_life, value=1, font=('Arial', 14))
+# Create radio buttons with formatted text
+checkbox1 = tk.Radiobutton(checkbox_frame, text=text1, variable=selection_half_life, value=1, font=('Arial', 14))
 checkbox1.pack(anchor='w')
-checkbox2 = tk.Radiobutton(checkbox_frame, text= 1.0$*10^27$ "(Shorter)", variable=selection_half_life, value=2, font=('Arial', 14))
+checkbox2 = tk.Radiobutton(checkbox_frame, text=text2, variable=selection_half_life, value=2, font=('Arial', 14))
 checkbox2.pack(anchor='w')
-checkbox3 = tk.Radiobutton(checkbox_frame, text= 1.35$*10^28$ "(90% CL)", variable=selection_half_life, value=3, font=('Arial', 14))
+checkbox3 = tk.Radiobutton(checkbox_frame, text=text3, variable=selection_half_life, value=3, font=('Arial', 14))
 checkbox3.pack(anchor='w')
 
 # Frame for Volume Selection
