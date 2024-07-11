@@ -150,7 +150,7 @@ def main_loop():
 
     elapsed_time = 0
 
-    while elapsed_time < timer_duration.get()*12 not stop_simulation_event.is_set():  # 120 seconds = 10 years (1yr = 12s)
+    while elapsed_time < timer_duration.get()*12 and not stop_simulation_event.is_set():  # 120 seconds = 10 years (1yr = 12s)
         try:
             time_now = time.time()
 
