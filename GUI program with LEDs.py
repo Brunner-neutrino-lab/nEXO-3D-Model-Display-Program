@@ -276,9 +276,9 @@ checkbox_frame.pack(padx=10, pady=10)
 tk.Label(checkbox_frame, text="Choose Half Life:", font=('Arial', 16, 'bold')).pack(pady=2)
 
 # text for exponents
-text1 = "7.4²⁷"  # 7.4^27
-text2 = "1.0²⁷"  # 1.0^27
-text3 = "1.35²⁸"  # 1.35^28
+text1 = "7.4²⁷ years (3\u03C3)"  # 7.4^27
+text2 = "1.0²⁷ years (Shorter)"  # 1.0^27
+text3 = "1.35²⁸ years (90% CL)"  # 1.35^28
 
 # Variables for radio buttons
 selection_half_life = tk.IntVar()
