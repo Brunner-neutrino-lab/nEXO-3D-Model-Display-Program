@@ -277,11 +277,11 @@ tk.Label(checkbox_frame, text="Choose Half Life:", font=('Arial', 16, 'bold')).p
 
 selection_half_life = tk.IntVar()
 
-checkbox1 = tk.Radiobutton(checkbox_frame, text="3 sigma discovery", variable=selection_half_life, value=1, font=('Arial', 14))
+checkbox1 = tk.Radiobutton(checkbox_frame, text= 7.4$*10^27$"(3σ)", variable=selection_half_life, value=1, font=('Arial', 14))
 checkbox1.pack(anchor='w')
-checkbox2 = tk.Radiobutton(checkbox_frame, text="Shorter half-life", variable=selection_half_life, value=2, font=('Arial', 14))
+checkbox2 = tk.Radiobutton(checkbox_frame, text= 1.0$*10^27$ "(Shorter)", variable=selection_half_life, value=2, font=('Arial', 14))
 checkbox2.pack(anchor='w')
-checkbox3 = tk.Radiobutton(checkbox_frame, text="Sensitivity 90% CL", variable=selection_half_life, value=3, font=('Arial', 14))
+checkbox3 = tk.Radiobutton(checkbox_frame, text= 1.35$*10^28$ "(90% CL)", variable=selection_half_life, value=3, font=('Arial', 14))
 checkbox3.pack(anchor='w')
 
 # Frame for Volume Selection
