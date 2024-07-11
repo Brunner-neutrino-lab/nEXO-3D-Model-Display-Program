@@ -196,7 +196,7 @@ def main_loop():
     is_simulation_running = False
 
 def update_timer_label(start_years=10):
-    global timer_label
+    global timer_label, is_simulation_running
     
     def update(elapsed_seconds):
         if elapsed_seconds <= start_years * 12 and is_simulation_running:  # Convert years to seconds (1yr = 12s)
@@ -204,7 +204,8 @@ def update_timer_label(start_years=10):
             timer_label.config(text=f"Time remaining: {years_remaining:.2f} years")
             root.after(1000, update, elapsed_seconds + 1)  # Schedule the next update
     
-    update(0)  # Start the update process with elapsed_seconds initialized to 0
+    # Start the update process with elapsed_seconds initialized to 0
+    update(0)
 
 
 
@@ -215,7 +216,7 @@ def start_simulation():
     start_years = timer_duration.get()
     
     # Update timer label with selected duration
-    update_timer_label(start_years)
+    update_timer_label(timer_duration.get())
 
     # Check if a simulation is already running
     if is_simulation_running:
