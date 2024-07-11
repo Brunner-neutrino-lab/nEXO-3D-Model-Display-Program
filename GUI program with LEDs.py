@@ -246,6 +246,7 @@ def stop_simulation():
     # Set the stop event to signal the thread to stop
     stop_simulation_event.set()
 
+global timer_label
 
 root = tk.Tk()
 root.title("Command Window")
