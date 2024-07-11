@@ -216,7 +216,7 @@ root.title("Command Window")
 root.geometry("800x480")
 root.configure(bg='#2874A6')
 
-main_frame = tk.Frame(root)
+main_frame = tk.Frame(root, bg='lightblue')
 main_frame.pack(padx=20, pady=20, fill=tk.BOTH, expand=True)
 
 # Color Coding Labels
