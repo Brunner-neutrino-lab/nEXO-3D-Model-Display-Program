@@ -29,6 +29,9 @@ RED.start(0)
 GREEN.start(0)
 BLUE.start(0)
 
+# Event to signal simulation stop
+stop_simulation_event = threading.Event()
+simulation_thread = None
 
 def flash(events):
     flashtime = 0.5  # s that LEDs should flash
@@ -202,11 +205,27 @@ def update_timer_label(start_years=10):
 
 
 def start_simulation():
-    # Function to start simulation thread and timer
-    start_years = timer_duration.get()  # Get selected timer duration (5 or 10 years)
+    global simulation_thread, stop_simulation_event
+    
+    # Get selected timer duration (5 or 10 years)
+    start_years = timer_duration.get()
+    
+    # Update timer label with selected duration
     update_timer_label(start_years)
 
-    simulation_thread = threading.Thread(target=main_loop) # Start main_loop
+    # Check if a simulation thread is already running
+    if simulation_thread and simulation_thread.is_alive():
+        # Set the stop event to signal the thread to stop
+        stop_simulation_event.set()
+        
+        # Wait for the simulation thread to finish
+        simulation_thread.join()
+
+    # Clear the stop event for a new simulation
+    stop_simulation_event.clear()
+    
+    # Start a new simulation thread
+    simulation_thread = threading.Thread(target=main_loop)
     simulation_thread.start()
 
 
