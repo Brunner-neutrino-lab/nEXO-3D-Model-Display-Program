@@ -82,7 +82,9 @@ def flash(events):
     GPIO.output(wallGPIO, GPIO.LOW)
 
 def main_loop():
-    global stop_simulation_event
+    global stop_simulation_event, is_simulation_running
+    is_simulation_running = True
+    
     rates_per_year = np.zeros(7)  # array to store events/year for each type
 
     # 0vbb:
@@ -148,7 +150,7 @@ def main_loop():
 
     elapsed_time = 0
 
-    while stop_simulation_event.is_set() and elapsed_time < timer_duration.get()*12:  # 120 seconds = 10 years (1yr = 12s)
+    while elapsed_time < timer_duration.get()*12 not stop_simulation_event.is_set():  # 120 seconds = 10 years (1yr = 12s)
         try:
             time_now = time.time()
 
@@ -191,6 +193,7 @@ def main_loop():
             break
     print("end")
     stop_simulation_event.clear()  # Clear the stop event flag
+    is_simulation_running = False
 
 def update_timer_label(start_years=10):
     elapsed_seconds = 0  # initialize elapsed seconds
