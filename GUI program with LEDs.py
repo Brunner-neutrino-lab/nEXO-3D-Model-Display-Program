@@ -328,11 +328,11 @@ radio10.pack(anchor='w')
 
 # Button to Start Simulation
 start_button = tk.Button(choices_frame2, text="Start Simulation", command=start_simulation, width=15, height=2, padx = 10, pady = 10, font = ('Arial', 18, 'bold'))
-start_button.pack(padx=10, pady=30)
+start_button.pack(padx=10, pady=10)
 
 # Button to Stop Simulation
 stop_button = tk.Button(choices_frame2, text="Stop", command=stop_simulation, width=8, height=1, padx=10, pady=10, font=('Arial', 16, 'bold'))
-stop_button.grid(row=1, column=0, padx=10, pady=10)
+stop_button.pack(padx=10, pady=10)
 
 # Label to Display Timer
 timer_label = tk.Label(choices_frame2, text="Time remaining: 0.00 years", font=('Arial', 14, 'bold'))
