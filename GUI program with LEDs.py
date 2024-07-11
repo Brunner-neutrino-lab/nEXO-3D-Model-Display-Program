@@ -198,17 +198,14 @@ def main_loop():
 def update_timer_label(start_years=10):
     global timer_label
     
-    elapsed_seconds = 0  # initialize elapsed seconds
-    
-    def update(): # Update timer on the display
-        nonlocal elapsed_seconds
+    def update(elapsed_seconds):
         if elapsed_seconds <= start_years * 12 and is_simulation_running:  # Convert years to seconds (1yr = 12s)
             years_remaining = start_years - elapsed_seconds / 12
             timer_label.config(text=f"Time remaining: {years_remaining:.2f} years")
-            elapsed_seconds += 1
-            root.after(1000, update)  # Schedule the next update
+            root.after(1000, update, elapsed_seconds + 1)  # Schedule the next update
     
-    update()
+    update(0)  # Start the update process with elapsed_seconds initialized to 0
+
 
 
 def start_simulation():
