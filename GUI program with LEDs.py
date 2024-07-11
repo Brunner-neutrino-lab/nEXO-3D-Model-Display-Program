@@ -221,13 +221,14 @@ main_frame.pack(padx=20, pady=20, fill=tk.BOTH, expand=True)
 
 # Color Coding Labels
 cases = [
-    ("Muons", "blue"),
-    ("Background", "cyan"),
-    ("0vbb", "orange"),
-    ("Xe137", "white"),
-    ("2vbb", "purple"),
-    ("Solar v", "yellow"),
+    ("Muons", 'blue'),
+    ("ROI_background", "#00F028"),  # RGB(0, 240, 40)
+    ("0vbb", "#FF4500"),            # RGB(255, 69, 0)
+    ("2vbb", "#FF1493"),            # RGB(255, 20, 147)
+    ("Xe137", "#C8C8C8"),           # RGB(200, 200, 200)
+    ("Solar v", "#F5EB0A"),         # RGB(245, 235, 10)
 ]
+
 
 # Frame for Color Coding (Left)
 table_frame = tk.Frame(main_frame)
