@@ -196,7 +196,7 @@ def main_loop():
     is_simulation_running = False
 
 def update_timer_label(start_years=10):
-    global timer_label, is_simulation_running
+    global is_simulation_running
 
     elapsed_seconds = 0  # Initialize elapsed_seconds
 
@@ -243,7 +243,6 @@ def stop_simulation():
     # Set the stop event to signal the thread to stop
     stop_simulation_event.set()
 
-global timer_label
 
 root = tk.Tk()
 root.title("Command Window")
