@@ -225,7 +225,7 @@ cases = [
     ("ROI_background", "green", "#00F028"),  # RGB(0, 240, 40)
     ("0vbb", "orange", "#FF4500"),           # RGB(255, 69, 0)
     ("2vbb", "pink", "#FF1493"),             # RGB(255, 20, 147)
-    ("Xe137", "white", "#C8C8C8"),            # RGB(200, 200, 200)
+    ("Xe137", "white", "white"),            # RGB(200, 200, 200)
     ("Solar v", "yellow", "#F5EB0A"),        # RGB(245, 235, 10)
 ]
 
