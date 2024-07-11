@@ -201,6 +201,10 @@ def update_timer_label(start_years=10):
 
     elapsed_seconds = 0  # Initialize elapsed_seconds
 
+    if start_years == 'off':
+        timer_label.config(text="Time remaining: 0.00 years")
+        years_remaining = 0
+
     def update():
         nonlocal elapsed_seconds
         if elapsed_seconds <= start_years * 12:  # Convert years to seconds (1yr = 12s)
@@ -245,9 +249,7 @@ def stop_simulation():
     # Set the stop event to signal the thread to stop
     stop_simulation_event.set()
     
-    # Reset timer label
-    timer_label.config(text="Time remaining: 0.00 years")
-    update_timer_label(0)
+    update_timer_label('off')
 
 root = tk.Tk()
 root.title("Command Window")
