@@ -218,15 +218,29 @@ def start_simulation():
         # Set the stop event to signal the thread to stop
         stop_simulation_event.set()
         
-        # Wait for the simulation thread to finish
-        simulation_thread.join()
+        # Schedule a check to join the thread after a short delay
+        root.after(100, check_thread_finished)
+    else:
+        # Clear the stop event for a new simulation
+        stop_simulation_event.clear()
+        
+        # Start a new simulation thread
+        simulation_thread = threading.Thread(target=main_loop)
+        simulation_thread.start()
 
-    # Clear the stop event for a new simulation
-    stop_simulation_event.clear()
+def check_thread_finished():
+    global simulation_thread
     
-    # Start a new simulation thread
-    simulation_thread = threading.Thread(target=main_loop)
-    simulation_thread.start()
+    # Check if the simulation thread is still alive
+    if simulation_thread and simulation_thread.is_alive():
+        # If alive, schedule another check after a short delay
+        root.after(100, check_thread_finished)
+    else:
+        # If not alive, start a new simulation
+        stop_simulation_event.clear()
+        simulation_thread = threading.Thread(target=main_loop)
+        simulation_thread.start()
+
 
 
 
