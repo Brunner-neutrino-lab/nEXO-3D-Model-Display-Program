@@ -238,10 +238,8 @@ table_frame.grid(row=0, column=0, padx=20, pady=20, sticky="nsew")
 tk.Label(table_frame, text="Color Coding", font=('Arial', 16, 'bold')).grid(row=0, columnspan=2, pady=8)
 for i, (case, color_name, color_hex) in enumerate(cases, start=1):
     tk.Label(table_frame, text=case, font=('Arial', 12)).grid(row=i, column=0, padx=4, pady=4, sticky='w')
-    color_label_frame = tk.Frame(table_frame, bg=color_hex, width=80, height=50)
-    color_label_frame.grid_propagate(False)  # Prevents the frame from resizing to its contents
-    color_label_frame.grid(row=i, column=1, padx=8, pady=8, sticky='w')
-    tk.Label(color_label_frame, text=color_name, bg=color_hex, fg='black', font=('Arial', 12)).pack(expand=True, fill=tk.BOTH)
+    color_label = tk.Label(table_frame, text=color_name, bg=color_hex, fg='black', font=('Arial', 12), width=15, height=2)
+    color_label.grid(row=i, column=1, padx=8, pady=8, sticky='w')
 
 
 # Frame for Selection Choices 
