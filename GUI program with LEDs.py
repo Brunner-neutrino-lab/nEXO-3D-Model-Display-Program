@@ -208,10 +208,6 @@ def update_timer_label(start_years=10):
             timer_label.config(text=f"Time remaining: {years_remaining:.2f} years")
             elapsed_seconds += 1
             root.after(1000, update)  # Schedule the next update
-            if stop_simulation_event.set():
-                break
-                # Reset timer label
-                timer_label.config(text="Time remaining: 0.00 years")
 
     update()  # Start the update process
     print('timer updated!')
