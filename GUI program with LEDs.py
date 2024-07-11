@@ -244,7 +244,7 @@ def stop_simulation():
     
     # Set the stop event to signal the thread to stop
     stop_simulation_event.set()
-
+    elapsed_time = timer_duration.get()*12
 
 root = tk.Tk()
 root.title("Command Window")
