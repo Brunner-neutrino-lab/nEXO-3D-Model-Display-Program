@@ -237,9 +237,8 @@ def check_thread_finished():
         root.after(100, check_thread_finished)
     else:
         # If not alive, start a new simulation
-        stop_simulation_event.clear()
-        simulation_thread = threading.Thread(target=main_loop)
-        simulation_thread.start()
+        start_simulation()
+
 
 
 
