@@ -236,7 +236,7 @@ table_frame.grid(row=0, column=0, padx=20, pady=20, sticky="nsew")
 # Building the color coding
 tk.Label(table_frame, text="Color Coding", font=('Arial', 16, 'bold')).grid(row=0, columnspan=2, pady=8)
 for i, (case, color) in enumerate(cases, start=1):
-    tk.Label(table_frame, text=case, font=('Arial', 14)).grid(row=i, column=0, padx=4, pady=4, sticky='w')
+    tk.Label(table_frame, text=case, font=('Arial', 12)).grid(row=i, column=0, padx=4, pady=4, sticky='w')
     color_label = tk.Label(table_frame, text=color, font=('Arial', 14), bg=color, fg='black', width=8)
     color_label.grid(row=i, column=1, padx=8, pady=8, sticky='w')
 
