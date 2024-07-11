@@ -209,6 +209,7 @@ def update_timer_label(start_years=10):
             root.after(1000, update)  # Schedule the next update
 
     update()  # Start the update process
+    print('timer updated!')
 
 
 def start_simulation():
@@ -219,7 +220,7 @@ def start_simulation():
     
     # Update timer label with selected duration
     update_timer_label(start_years)
-    print('timer updated!')
+   
 
     # Check if a simulation is already running
     if is_simulation_running:
