@@ -225,7 +225,7 @@ cases = [
     ("ROI_background", "green", "#00F028"),  # RGB(0, 240, 40)
     ("0vbb", "orange", "#FF4500"),           # RGB(255, 69, 0)
     ("2vbb", "pink", "#FF1493"),             # RGB(255, 20, 147)
-    ("Xe137", "grey", "#C8C8C8"),            # RGB(200, 200, 200)
+    ("Xe137", "white", "#C8C8C8"),            # RGB(200, 200, 200)
     ("Solar v", "yellow", "#F5EB0A"),        # RGB(245, 235, 10)
 ]
 
@@ -238,7 +238,7 @@ table_frame.grid(row=0, column=0, padx=20, pady=20, sticky="nsew")
 tk.Label(table_frame, text="Color Coding", font=('Arial', 16, 'bold')).grid(row=0, columnspan=2, pady=8)
 for i, (case, color_name, color_hex) in enumerate(cases, start=1):
     tk.Label(table_frame, text=case, font=('Arial', 12)).grid(row=i, column=0, padx=4, pady=4, sticky='w')
-    color_label = tk.Label(table_frame, text=color_name, bg=color_hex, fg='black', font=('Arial', 12), width=15, height=2)
+    color_label = tk.Label(table_frame, text=color_name, bg=color_hex, fg='black', font=('Arial', 12), width=8, height=1)
     color_label.grid(row=i, column=1, padx=8, pady=8, sticky='w')
 
 
