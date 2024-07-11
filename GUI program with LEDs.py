@@ -121,11 +121,11 @@ def main_loop():
     rates_per_year[4] = bgd_remaining
 
     # mean = 0.6 * 365.25  # muons/year (0.6/day)
-    mean = 0.006 * 365.25  # muons/year (0.6/day)
+    mean = 0.06 * 365.25  # muons/year (0.6/day)
     rates_per_year[5] = mean
 
     # mean = 5 * 365.25  # muons/year (5/day)
-    mean = 0.005 * 365.25  # muons/year (5/day)
+    mean = 0.05 * 365.25  # muons/year (5/day)
     rates_per_year[6] = mean
 
     mean_times = 1 / (rates_per_year / 12)
