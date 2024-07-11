@@ -247,7 +247,7 @@ def stop_simulation():
     
     # Reset timer label
     timer_label.config(text="Time remaining: 0.00 years")
-
+    update_timer_label(0)
 
 root = tk.Tk()
 root.title("Command Window")
