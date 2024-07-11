@@ -229,9 +229,6 @@ def start_simulation():
     
     # Clear the stop event for a new simulation
     stop_simulation_event.clear()
-
-    # Reset timer label
-    timer_label.config(text="Time remaining: 0.00 years")
     
     # Start a new simulation thread
     simulation_thread = threading.Thread(target=main_loop)
