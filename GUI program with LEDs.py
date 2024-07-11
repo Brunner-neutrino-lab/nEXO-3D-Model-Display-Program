@@ -242,13 +242,13 @@ for i, (case, color) in enumerate(cases, start=1):
 
 # Frame for Selection Choices 
 choices_frame = tk.Frame(main_frame)
-choices_frame.grid(row=0, column=1, padx=20, pady=20, sticky="nsew")
+choices_frame.grid(row=0, column=1, padx=10, pady=10, sticky="nsew")
 
 # Frame for Half-life Selection
 checkbox_frame = tk.Frame(choices_frame)
 checkbox_frame.pack(padx=10, pady=10)
 
-tk.Label(checkbox_frame, text="Choose Half Life:", font=('Arial', 18, 'bold')).pack(pady=5)
+tk.Label(checkbox_frame, text="Choose Half Life:", font=('Arial', 16, 'bold')).pack(pady=2)
 
 selection_half_life = tk.IntVar()
 
@@ -263,41 +263,41 @@ checkbox3.pack(anchor='w')
 volume_frame = tk.Frame(choices_frame)
 volume_frame.pack(padx=10, pady=40)
 
-tk.Label(volume_frame, text="Choose Volume:", font=('Arial', 18, 'bold')).pack(pady=5)
+tk.Label(volume_frame, text="Choose Volume:", font=('Arial', 16, 'bold')).pack(pady=2)
 
 selection_volume = tk.IntVar()
 
-radio1 = tk.Radiobutton(volume_frame, text="1 ton", variable=selection_volume, value=1, font=('Arial', 14))
+radio1 = tk.Radiobutton(volume_frame, text="1 ton", variable=selection_volume, value=1, font=('Arial', 12))
 radio1.pack(anchor='w')
-radio2 = tk.Radiobutton(volume_frame, text="2 tons", variable=selection_volume, value=2, font=('Arial', 14))
+radio2 = tk.Radiobutton(volume_frame, text="2 tons", variable=selection_volume, value=2, font=('Arial', 12))
 radio2.pack(anchor='w')
 
 
 
 # Frame for Submit Button and Timer Label (Right)
 choices_frame2 = tk.Frame(main_frame)
-choices_frame2.grid(row=0, column=2, padx=20, pady=20, sticky="nsew")
+choices_frame2.grid(row=0, column=2, padx=10, pady=10, sticky="nsew")
 
 # Frame for Timer Duration Selection
 timer_frame = tk.Frame(choices_frame2)
 timer_frame.pack(padx=10, pady=10)
 
-tk.Label(timer_frame, text="Choose Timer Duration:", font=('Arial', 18, 'bold')).pack(pady=5)
+tk.Label(timer_frame, text="Choose Timer Duration:", font=('Arial', 16, 'bold')).pack(pady=2)
 
 timer_duration = tk.IntVar()
 
-radio5 = tk.Radiobutton(timer_frame, text="5 years", variable=timer_duration, value=5, font=('Arial', 14))
+radio5 = tk.Radiobutton(timer_frame, text="5 years", variable=timer_duration, value=5, font=('Arial', 12))
 radio5.pack(anchor='w')
-radio10 = tk.Radiobutton(timer_frame, text="10 years", variable=timer_duration, value=10, font=('Arial', 14))
+radio10 = tk.Radiobutton(timer_frame, text="10 years", variable=timer_duration, value=10, font=('Arial', 12))
 radio10.pack(anchor='w')
 
 
 # Button to Start Simulation
-start_button = tk.Button(choices_frame2, text="Start Simulation", command=start_simulation, width=16, height=2, padx = 10, pady = 10, font = ('Arial', 14, 'bold'))
+start_button = tk.Button(choices_frame2, text="Start Simulation", command=start_simulation, width=16, height=2, padx = 10, pady = 10, font = ('Arial', 18, 'bold'))
 start_button.pack(padx=10, pady=30)
 
 # Label to Display Timer
-timer_label = tk.Label(choices_frame2, text="Time remaining: 0.00 years", font=('Arial', 16, 'bold'))
+timer_label = tk.Label(choices_frame2, text="Time remaining: 0.00 years", font=('Arial', 15, 'bold'))
 timer_label.pack(pady=10)
 
 # Configuring expansion options for main_frame
