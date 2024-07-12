@@ -330,7 +330,7 @@ selection_muon_scaling = tk.IntVar()
 
 radio1 = tk.Radiobutton(muon_frame, text="Unscaled", variable=selection_muon_scaling, value=1, font=('Arial', 12))
 radio1.pack(anchor='w')
-radio2 = tk.Radiobutton(muon_frame, text="Scaled down by 10", variable=selection_muon_scaling, value=2, font=('Arial', 12))
+radio2 = tk.Radiobutton(muon_frame, text="Scaled down by 100", variable=selection_muon_scaling, value=2, font=('Arial', 12))
 radio2.pack(anchor='w')
 
 
