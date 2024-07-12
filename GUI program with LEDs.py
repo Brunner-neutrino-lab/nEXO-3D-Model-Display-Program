@@ -323,7 +323,7 @@ radio2.pack(anchor='w')
 
 # Frame for Muon Selection
 muon_frame = tk.Frame(choices_frame)
-muon_frame.pack(padx=10, pady=20)
+muon_frame.pack(padx=10, pady=10)
 
 tk.Label(muon_frame, text="Muon Rate:", font=('Arial', 16, 'bold')).pack(pady=2)
 
