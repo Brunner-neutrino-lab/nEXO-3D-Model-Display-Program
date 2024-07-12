@@ -29,11 +29,6 @@ RED.start(0)
 GREEN.start(0)
 BLUE.start(0)
 
-# Global variables for threading and simulation control
-simulation_thread = None
-stop_simulation_event = threading.Event()
-is_simulation_running = False
-
 def flash(events):
     flashtime = 0.5  # s that LEDs should flash
 
@@ -197,8 +192,6 @@ def main_loop():
         except KeyboardInterrupt:
             break
     print("end")
-    stop_simulation_event.clear()  # Clear the stop event flag
-    is_simulation_running = False
 
 def update_timer_label(start_years=10):
 
@@ -206,49 +199,32 @@ def update_timer_label(start_years=10):
 
     def update():
         nonlocal elapsed_seconds
-        if elapsed_seconds <= start_years * 12:  # Convert years to seconds (1yr = 12s)
-            years_remaining = start_years - elapsed_seconds / 12
-            timer_label.config(text=f"Time remaining: {years_remaining:.2f} years")
-            elapsed_seconds += 1
-            root.after(1000, update)  # Schedule the next update
+        if sim_running == True : # Test if sumulation is running
+            if elapsed_seconds <= start_years * 12:  # Convert years to seconds (1yr = 12s)
+                years_remaining = start_years - elapsed_seconds / 12
+                timer_label.config(text=f"Time remaining: {years_remaining:.2f} years")
+                elapsed_seconds += 1
+                root.after(1000, update)  # Schedule the next update
 
     update()  # Start the update process
-    print('timer updated!')
 
 
 def start_simulation():
-    global simulation_thread, stop_simulation_event, is_simulation_running
-    
-    # Get selected timer duration (5 or 10 years)
-    start_years = timer_duration.get()
-    
+    global sim_running, start_years
+    sim_running = True
+
+    # Function to start simulation thread and timer
+    start_years = timer_duration.get() # Get selected timer duration (5 or 10 years)
     # Update timer label with selected duration
     update_timer_label(start_years)
-   
-
-    # Check if a simulation is already running
-    if is_simulation_running:
-        # Set the stop event to signal the thread to stop
-        stop_simulation_event.set()
-        
-        # Wait for the simulation thread to finish
-        if simulation_thread:
-            simulation_thread.join()
-    
-    # Clear the stop event for a new simulation
-    stop_simulation_event.clear()
-    
-    # Start a new simulation thread
-    simulation_thread = threading.Thread(target=main_loop)
+    simulation_thread = threading.Thread(target=main_loop) # start main_loop
     simulation_thread.start()
 
-#def stop_simulation():
-#    global simulation_thread, stop_simulation_event, is_simulation_running
-    
-    # Set the stop event to signal the thread to stop
- #   stop_simulation_event.set()
- #   timer_label.config(text="Time remaining: 0.00 years")
-    
+def stop_simulation():
+    global sim_running, start_years
+    timer_label.config(text="Time remaining: 0.00 years")
+    start_years = None # Clear value
+    sim_running = False # stop simulation
 
 root = tk.Tk()
 root.title("Command Window")
@@ -358,8 +334,8 @@ start_button = tk.Button(choices_frame2, text="Start Simulation", command=start_
 start_button.pack(padx=10, pady=10)
 
 # Button to Stop Simulation
-#stop_button = tk.Button(choices_frame2, text="Stop", command=stop_simulation, width=8, height=1, padx=10, pady=10, font=('Arial', 16, 'bold'))
-#stop_button.pack(padx=10, pady=10)
+stop_button = tk.Button(choices_frame2, text="Stop", command=stop_simulation, width=8, height=1, padx=10, pady=10, font=('Arial', 16, 'bold'))
+stop_button.pack(padx=10, pady=10)
 
 # Label to Display Timer
 timer_label = tk.Label(choices_frame2, text="Time remaining: 0.00 years", font=('Arial', 14, 'bold'))
