@@ -3,7 +3,8 @@
 1. Make sure the VGA cable is connectly to the model and the pi
 2. Plug in the power supply the the female connector on the pi box
 3. The program should startup at boot and now is ready to simulate!
-4. (the first simulation may not turn on LEDs, just wait for the timer to count down then start again)
+* (the first simulation may not turn on LEDs, just wait for the timer to count down then start again)
+* Also the command window can be dragged around screen
 
 ## To shut down
 
