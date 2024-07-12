@@ -126,9 +126,9 @@ def main_loop():
         mean_muons_cryostat = mean = 5 * 365.25  # muons/year (5/day)
         rates_per_year[6] = mean_muons_cryostat
     elif selection_muon_scaling.get() == 2: #muon rate scaled down by 10
-        mean_muons_TPC = 0.06 * 365.25  # muons/year (0.6/day)
+        mean_muons_TPC = 0.006 * 365.25  # muons/year (0.6/day)
         rates_per_year[5] = mean_muons_TPC
-        mean_muons_cryostat = mean = 0.5 * 365.25  # muons/year (5/day)
+        mean_muons_cryostat = mean = 0.05 * 365.25  # muons/year (5/day)
         rates_per_year[6] = mean_muons_cryostat
 
 
