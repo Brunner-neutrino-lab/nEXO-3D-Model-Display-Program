@@ -323,13 +323,13 @@ radio2.pack(anchor='w')
 
 # Frame for Muon Selection
 muon_frame = tk.Frame(choices_frame)
-muon_frame.pack(padx=10, pady=20)
+muon_frame.pack(padx=10, pady=40)
 
-tk.Label(volume_frame, text="Muon Rate:", font=('Arial', 16, 'bold')).pack(pady=2)
+tk.Label(muon_frame, text="Muon Rate:", font=('Arial', 16, 'bold')).pack(pady=2)
 
 selection_muon_scaling = tk.IntVar()
 
-radio1 = tk.Radiobutton(muon_frame, text="Realistic", variable=selection_muon_scaling, value=1, font=('Arial', 12))
+radio1 = tk.Radiobutton(muon_frame, text="Unscaled", variable=selection_muon_scaling, value=1, font=('Arial', 12))
 radio1.pack(anchor='w')
 radio2 = tk.Radiobutton(muon_frame, text="Scaled down by 10", variable=selection_muon_scaling, value=2, font=('Arial', 12))
 radio2.pack(anchor='w')
