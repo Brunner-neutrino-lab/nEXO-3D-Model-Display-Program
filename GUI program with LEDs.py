@@ -344,13 +344,13 @@ choices_frame2.grid(row=0, column=2, padx=10, pady=10, sticky="nsew")
 timer_frame = tk.Frame(choices_frame2)
 timer_frame.pack(padx=10, pady=10)
 
-tk.Label(timer_frame, text="Choose Timer Duration:", font=('Arial', 16, 'bold')).pack(pady=2)
+tk.Label(timer_frame, text="Choose Time Duration:", font=('Arial', 16, 'bold')).pack(pady=2)
 
 timer_duration = tk.IntVar()
 
-radio5 = tk.Radiobutton(timer_frame, text="5 years", variable=timer_duration, value=5, font=('Arial', 12))
+radio5 = tk.Radiobutton(timer_frame, text="1 min (5 years of data)", variable=timer_duration, value=5, font=('Arial', 12))
 radio5.pack(anchor='w')
-radio10 = tk.Radiobutton(timer_frame, text="10 years", variable=timer_duration, value=10, font=('Arial', 12))
+radio10 = tk.Radiobutton(timer_frame, text="2 min (10 years of data)", variable=timer_duration, value=10, font=('Arial', 12))
 radio10.pack(anchor='w')
 
 
