@@ -120,13 +120,17 @@ def main_loop():
     rates_per_year[3] = rate_solar_v
     rates_per_year[4] = bgd_remaining
 
-    # mean = 0.6 * 365.25  # muons/year (0.6/day)
-    mean = 0.06 * 365.25  # muons/year (0.6/day)
-    rates_per_year[5] = mean
+    if selection_muon_scaling.get() == 1: #realistic muon rate
+        mean_muons_TPC = 0.6 * 365.25  # muons/year (0.6/day)
+        rates_per_year[5] = mean_muons_TPC
+        mean_muons_cryostat = mean = 5 * 365.25  # muons/year (5/day)
+        rates_per_year[6] = mean_muons_cryostat
+    elif selection_muon_scaling.get() == 2: #muon rate scaled down by 10
+        mean_muons_TPC = 0.06 * 365.25  # muons/year (0.6/day)
+        rates_per_year[5] = mean_muons_TPC
+        mean_muons_cryostat = mean = 0.5 * 365.25  # muons/year (5/day)
+        rates_per_year[6] = mean_muons_cryostat
 
-    # mean = 5 * 365.25  # muons/year (5/day)
-    mean = 0.05 * 365.25  # muons/year (5/day)
-    rates_per_year[6] = mean
 
     mean_times = 1 / (rates_per_year / 12)
     mean_0vbb, mean_2vbb, mean_Xe137, mean_solar_v, mean_ROI_background, mean_TPC_muon, mean_cryostat_muon = mean_times
@@ -289,19 +293,19 @@ checkbox_frame.pack(padx=10, pady=10)
 tk.Label(checkbox_frame, text="Choose Half Life:", font=('Arial', 16, 'bold')).pack(pady=2)
 
 # text for exponents
-text1 = "7.4²⁷ years (3\u03C3)"  # 7.4^27
-text2 = "1.0²⁷ years (Shorter)"  # 1.0^27
-text3 = "1.35²⁸ years (90% CL)"  # 1.35^28
+text1 = "7.4*10²⁷ yrs (3\u03C3)"  # 7.4^27
+text2 = "1.0*10²⁷ yrs (Shorter)"  # 1.0^27
+text3 = "1.35*10²⁸ yrs (90% CL)"  # 1.35^28
 
 # Variables for radio buttons
 selection_half_life = tk.IntVar()
 
 # Create radio buttons with formatted text
-checkbox1 = tk.Radiobutton(checkbox_frame, text=text1, variable=selection_half_life, value=1, font=('Arial', 14))
+checkbox1 = tk.Radiobutton(checkbox_frame, text=text1, variable=selection_half_life, value=1, font=('Arial', 12))
 checkbox1.pack(anchor='w')
-checkbox2 = tk.Radiobutton(checkbox_frame, text=text2, variable=selection_half_life, value=2, font=('Arial', 14))
+checkbox2 = tk.Radiobutton(checkbox_frame, text=text2, variable=selection_half_life, value=2, font=('Arial', 12))
 checkbox2.pack(anchor='w')
-checkbox3 = tk.Radiobutton(checkbox_frame, text=text3, variable=selection_half_life, value=3, font=('Arial', 14))
+checkbox3 = tk.Radiobutton(checkbox_frame, text=text3, variable=selection_half_life, value=3, font=('Arial', 12))
 checkbox3.pack(anchor='w')
 
 # Frame for Volume Selection
@@ -315,6 +319,19 @@ selection_volume = tk.IntVar()
 radio1 = tk.Radiobutton(volume_frame, text="1 ton", variable=selection_volume, value=1, font=('Arial', 12))
 radio1.pack(anchor='w')
 radio2 = tk.Radiobutton(volume_frame, text="2 tons", variable=selection_volume, value=2, font=('Arial', 12))
+radio2.pack(anchor='w')
+
+# Frame for Muon Selection
+muon_frame = tk.Frame(choices_frame)
+muon_frame.pack(padx=5, pady=5)
+
+tk.Label(volume_frame, text="Muon Rate:", font=('Arial', 16, 'bold')).pack(pady=1)
+
+selection_muon_scaling = tk.IntVar()
+
+radio1 = tk.Radiobutton(muon_frame, text="Realistic", variable=selection_muon_scaling, value=1, font=('Arial', 12))
+radio1.pack(anchor='w')
+radio2 = tk.Radiobutton(muon_frame, text="Scaled down by 10", variable=selection_muon_scaling, value=2, font=('Arial', 12))
 radio2.pack(anchor='w')
 
 
