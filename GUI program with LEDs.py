@@ -242,12 +242,12 @@ def start_simulation():
     simulation_thread = threading.Thread(target=main_loop)
     simulation_thread.start()
 
-def stop_simulation():
-    global simulation_thread, stop_simulation_event, is_simulation_running
+#def stop_simulation():
+#    global simulation_thread, stop_simulation_event, is_simulation_running
     
     # Set the stop event to signal the thread to stop
-    stop_simulation_event.set()
-    timer_label.config(text="Time remaining: 0.00 years")
+ #   stop_simulation_event.set()
+ #   timer_label.config(text="Time remaining: 0.00 years")
     
 
 root = tk.Tk()
@@ -358,8 +358,8 @@ start_button = tk.Button(choices_frame2, text="Start Simulation", command=start_
 start_button.pack(padx=10, pady=10)
 
 # Button to Stop Simulation
-stop_button = tk.Button(choices_frame2, text="Stop", command=stop_simulation, width=8, height=1, padx=10, pady=10, font=('Arial', 16, 'bold'))
-stop_button.pack(padx=10, pady=10)
+#stop_button = tk.Button(choices_frame2, text="Stop", command=stop_simulation, width=8, height=1, padx=10, pady=10, font=('Arial', 16, 'bold'))
+#stop_button.pack(padx=10, pady=10)
 
 # Label to Display Timer
 timer_label = tk.Label(choices_frame2, text="Time remaining: 0.00 years", font=('Arial', 14, 'bold'))
