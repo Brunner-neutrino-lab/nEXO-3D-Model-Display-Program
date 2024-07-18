@@ -8,7 +8,7 @@ This project showcases a scaled-down, 3D-printed model of the nEXO detector, des
 
 1. [Introduction](#introduction)
 2. [Project Features](#project-features)
-3. [Responsibilities](#responsabilities)
+3. [Responsibilities](#responsibilities)
 4. [Hardware Components](#hardware-components)
 5. [Software Components](#software-components)
 6. [Setup and Installation](#setup-and-installation)
