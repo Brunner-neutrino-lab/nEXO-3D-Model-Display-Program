@@ -8,7 +8,7 @@ This project showcases a scaled-down, 3D-printed model of the nEXO detector, des
 
 1. [Introduction](#introduction)
 2. [Project Features](#project-features)
-3. [Responsabilities](#responsabilities)
+3. [Responsibilities](#responsabilities)
 4. [Hardware Components](#hardware-components)
 5. [Software Components](#software-components)
 6. [Setup and Installation](#setup-and-installation)
@@ -33,7 +33,7 @@ The nEXO detector is part of an experiment projected to detect neutrino-less dou
 - **Interactive LED Display**: Powered by a Raspberry Pi, the LED display will showcase multiple half-lives of the decay to highlight its rarity.
 - **Condensed Time Frame**: Displaying ten years or five years of data in a two-minute or one-minute visualization respectively.
 
-## Responsabilities
+## Responsibilities
 
 1. 3D model and printing
 - Grace, Felix
