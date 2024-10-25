@@ -136,3 +136,4 @@ The outer detector (walls and floor) will be flashed for muons (these rates may 
 ## Acknowledgments
 
 This project is developed for the nEXO collaboration's Director's Review.
+For questions contact Grace at grace.champagne@mail.mcgill.ca
