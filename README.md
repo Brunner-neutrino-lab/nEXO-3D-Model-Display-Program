@@ -70,6 +70,7 @@ Brian is advising the programming and hardware
    
 2. **Hardware Assembly**:
    - Schematics for the Raspberry Pi HAT and inside the model are found in the 'Schematics' folder.
+   - Full tutorial on how to asssemble your own HAT found in 'nEXO Scale Model HAT text.docx'
 
 
 4. **Software Installation**:
