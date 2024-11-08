@@ -32,35 +32,35 @@ GPIO.output(wallGPIO, GPIO.HIGH)
 
 
 # background
-print("0vbb")
+print("background")
 RED.ChangeDutyCycle(0)
 GREEN.ChangeDutyCycle(240/255 * 100)
 BLUE.ChangeDutyCycle(40/255 * 100)
 time.sleep(flashtime)
 
 # 0vbb
-print("2vbb")
+print("0vbb")
 RED.ChangeDutyCycle(255/255 * 100)
 GREEN.ChangeDutyCycle(69/255 * 100)
 BLUE.ChangeDutyCycle(0)  
 time.sleep(flashtime)
 
 # solar v
-print("Xe137")
+print("solar v")
 RED.ChangeDutyCycle(245/255 * 100)
 GREEN.ChangeDutyCycle(235/255 * 100)
 BLUE.ChangeDutyCycle(10/255 * 100)   
 time.sleep(flashtime)
 
 # 2vbb
-print("solar v")
+print("2vbb")
 RED.ChangeDutyCycle(255/255 * 100)
 GREEN.ChangeDutyCycle(20/255 * 100)
 BLUE.ChangeDutyCycle(147/255 * 100)  
 time.sleep(flashtime)
 
 # xenon 137
-print("ROI background")
+print("Xe137")
 RED.ChangeDutyCycle(200/255 * 100)
 GREEN.ChangeDutyCycle(200/255 * 100)
 BLUE.ChangeDutyCycle(200/255 * 100)
